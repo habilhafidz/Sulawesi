@@ -107,6 +107,7 @@ nav ul li a i {
 }
 
 .modal {
+  transform: translateY(-20px); /* Naikkan modal 20px */
   display: none;
   position: fixed;
   z-index: 1010;
@@ -120,7 +121,6 @@ nav ul li a i {
 }
 
 .modal-content {
-  top: 10px;
   text-align: justify;
   background-color: #3b2b1c;
   color: #bf9b7a;

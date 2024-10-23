@@ -1,46 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const lastRead = localStorage.getItem('modalLastRead');
-  const currentTime = new Date().getTime();
-
-  if (!lastRead || (currentTime - lastRead > 86400000)) {
     const infoModal = document.getElementById('infoModal');
-    if (infoModal) {
-      infoModal.style.display = 'flex'; // Tampilkan modal
+    const closeModal = document.getElementById('closeModal');
+    const iveReadBtn = document.getElementById('iveReadBtn');
 
-      const iveReadBtn = document.getElementById('iveReadBtn');
-      const closeModal = document.getElementById('closeModal');
+    if (infoModal && closeModal && iveReadBtn) {
+        document.getElementById('infoModal').style.display = 'flex'; // Tampilkan modal
 
-      // Pastikan elemen ada sebelum menambahkan event listener
-      if (iveReadBtn) {
         iveReadBtn.onclick = function() {
-          infoModal.style.display = 'none';
-          localStorage.setItem('modalLastRead', currentTime);
+            infoModal.style.display = 'none';
+            localStorage.setItem('modalLastRead', new Date().getTime());
         };
-      } else {
-        console.error('Button "I\'ve Read" not found.');
-      }
 
-      if (closeModal) {
         closeModal.onclick = function() {
-          console.log("Close button clicked!"); // Debugging
-          infoModal.style.display = 'none';
-          localStorage.setItem('modalLastRead', currentTime);
+            infoModal.style.display = 'none';
+            localStorage.setItem('modalLastRead', new Date().getTime());
         };
-      } else {
-        console.error('Close button not found.');
-      }
 
-      // Tutup modal jika klik di luar konten modal
-      window.onclick = function(event) {
-        if (event.target === infoModal) {
-          infoModal.style.display = 'none';
-          localStorage.setItem('modalLastRead', currentTime);
-        }
-      };
+        window.onclick = function(event) {
+            if (event.target === infoModal) {
+                infoModal.style.display = 'none';
+                localStorage.setItem('modalLastRead', new Date().getTime());
+            }
+        };
     } else {
-      console.error('Modal not found.');
+        console.error('Modal elements not found.');
     }
-  }
 });
 
 

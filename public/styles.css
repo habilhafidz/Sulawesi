@@ -107,32 +107,36 @@ nav ul li a i {
 }
 
 .modal {
-  display: none; /* Disembunyikan secara default */
+  display: none;
   position: fixed;
   z-index: 1010;
-  width: 100%; /* Menetapkan lebar 100% agar modal memenuhi layar */
+  width: 100%;
   height: 100%;
-  overflow: auto; /* Tambahkan scrollbar jika diperlukan */
-  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
-  
-  /* Menggunakan flexbox untuk memusatkan konten */
-  display: flex; /* Memastikan ini ada di sini */
-  justify-content: center; /* Memusatkan secara horizontal */
-  align-items: center; /* Memusatkan secara vertikal */
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
   text-align: justify;
-  background-color: #3b2b1c; /* Sesuaikan warna latar belakang modal */
+  background-color: #3b2b1c;
   color: #bf9b7a;
-  margin: 15px; /* Margin di luar modal */
-  padding: 20px; /* Padding di semua sisi */
-  padding-bottom: 120px; /* Tambahkan padding bawah untuk ruang ekstra */
-  padding-right: 40px;
+  margin: 15px;
+  padding: 20px;
+  padding-bottom: 120px; /* Ruang tambahan untuk gambar di bawah */
   border: 1px solid #888;
-  width: 80%; /* Lebar modal */
-  max-width: 500px; /* Membatasi lebar modal */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan untuk efek */
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto 0; /* Pusatkan gambar dengan margin atas */
 }
 
 /* Gaya untuk tombol I've Read, disamakan dengan Log Out */

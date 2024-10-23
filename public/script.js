@@ -1,29 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Cek apakah pengguna sudah menekan tombol "I've Read"
   const lastRead = localStorage.getItem('modalLastRead');
-  const currentTime = new Date().getTime();
+  const currentTime = new Date().getTime(); // Waktu saat ini dalam milidetik
 
+  // Jika belum ada timestamp atau sudah lebih dari 24 jam (86400000 ms)
   if (!lastRead || (currentTime - lastRead > 86400000)) {
     const modal = document.getElementById('infoModal');
-    modal.style.display = 'flex'; // Menampilkan modal dengan flex agar berada di tengah
+    modal.style.display = 'flex'; // Menampilkan modal di tengah
 
+    // Tambahkan event listener untuk tombol "I've Read"
     document.getElementById('iveReadBtn').onclick = function() {
       modal.style.display = 'none';
-      localStorage.setItem('modalLastRead', currentTime);
+      localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat tombol ditekan
     };
 
+    // Tambahkan event listener untuk tombol tutup
     document.getElementById('closeModal').onclick = function() {
       modal.style.display = 'none';
-      localStorage.setItem('modalLastRead', currentTime);
+      localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat modal ditutup
     };
 
+    // Tutup modal jika klik di luar konten modal
     window.onclick = function(event) {
-      if (event.target == modal) {
+      if (event.target === modal) {
         modal.style.display = 'none';
-        localStorage.setItem('modalLastRead', currentTime);
+        localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat modal ditutup
       }
     };
   }
 });
+
 
 // ------------------------------------------------------------------------------------------------------------------ //
 

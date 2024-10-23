@@ -110,12 +110,11 @@ nav ul li a i {
   display: none; /* Disembunyikan secara default */
   position: fixed;
   z-index: 1010;
-  left: 0; 
-  top: 0;
   width: 100%; /* Menetapkan lebar 100% agar modal memenuhi layar */
   height: 100%;
   overflow: auto; /* Tambahkan scrollbar jika diperlukan */
-  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  background-color: rgba(59, 43, 28, 0.5); /* Latar belakang semi-transparan */
+  
   /* Menggunakan flexbox untuk memusatkan konten */
   display: flex; /* Menggunakan flexbox */
   justify-content: center; /* Memusatkan secara horizontal */
@@ -123,17 +122,20 @@ nav ul li a i {
 }
 
 .modal-content {
+  text-align: justify;
   background-color: #fefefe;
+  color: #bf9b7a;
   margin: 15px; /* Margin di luar modal */
   padding: 20px; /* Padding di semua sisi */
-  padding-bottom: 40px; /* Tambahkan padding bawah untuk ruang ekstra */
+  padding-bottom: 80px; /* Tambahkan padding bawah untuk ruang ekstra */
   border: 1px solid #888;
   width: 80%; /* Lebar modal */
   max-width: 500px; /* Membatasi lebar modal */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan untuk efek */
 }
 
 .close-button {
-  color: #aaa;
+  color: #bf9b7a;
   float: right;
   font-size: 28px;
   font-weight: bold;

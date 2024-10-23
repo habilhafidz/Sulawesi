@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     document.getElementById('closeModal').onclick = function() {
+      console.log("Close button clicked!"); // Debugging
       document.getElementById('infoModal').style.display = 'none';
       localStorage.setItem('modalLastRead', currentTime);
     };

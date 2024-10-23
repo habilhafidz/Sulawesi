@@ -116,9 +116,9 @@ nav ul li a i {
   background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
   
   /* Menggunakan flexbox untuk memusatkan konten */
+  display: flex; /* Memastikan ini ada di sini */
   justify-content: center; /* Memusatkan secara horizontal */
   align-items: center; /* Memusatkan secara vertikal */
-  display: flex; /* Memastikan ini ada di sini, tapi tidak perlu diatur dengan dua kali */
 }
 
 .modal-content {

@@ -134,7 +134,7 @@ nav ul li a i {
 
 .modal-content img {
   display: block;
-  max-width: 100%;
+  max-width: 130px;
   height: auto;
   margin: 20px auto 0; /* Pusatkan gambar dengan margin atas */
 }

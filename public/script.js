@@ -1,3 +1,28 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Cek apakah pengguna sudah melihat modal
+  if (!localStorage.getItem('modalShown')) {
+    // Tampilkan modal
+    document.getElementById('infoModal').style.display = 'block';
+
+    // Tambahkan event listener untuk tombol tutup
+    document.getElementById('closeModal').onclick = function() {
+      document.getElementById('infoModal').style.display = 'none';
+      localStorage.setItem('modalShown', 'true'); // Simpan bahwa modal sudah ditampilkan
+    }
+
+    // Tutup modal jika klik di luar konten modal
+    window.onclick = function(event) {
+      const modal = document.getElementById('infoModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+        localStorage.setItem('modalShown', 'true'); // Simpan bahwa modal sudah ditampilkan
+      }
+    }
+  }
+});
+
+// ------------------------------------------------------------------------------------------------------------------ //
+
                                  // Toggle menu main page //
 
 function toggleMenu() {

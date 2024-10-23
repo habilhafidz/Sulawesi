@@ -127,11 +127,32 @@ nav ul li a i {
   color: #bf9b7a;
   margin: 15px; /* Margin di luar modal */
   padding: 20px; /* Padding di semua sisi */
-  padding-bottom: 80px; /* Tambahkan padding bawah untuk ruang ekstra */
+  padding-bottom: 120px; /* Tambahkan padding bawah untuk ruang ekstra */
+  padding-right: 40px;
   border: 1px solid #888;
   width: 80%; /* Lebar modal */
   max-width: 500px; /* Membatasi lebar modal */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Tambahkan bayangan untuk efek */
+}
+
+/* Gaya untuk tombol I've Read, disamakan dengan Log Out */
+#iveReadBtn {
+  background-color: #d9534f; /* Warna latar belakang merah serupa tombol Log Out */
+  color: white; /* Warna teks putih */
+  border: none; /* Hilangkan border */
+  padding: 10px 20px; /* Padding untuk ukuran yang sesuai */
+  text-align: center; /* Rata tengah teks */
+  text-decoration: none; /* Hilangkan underline */
+  display: inline-block; /* Pastikan inline-block */
+  font-size: 16px; /* Ukuran font */
+  margin-top: 20px; /* Beri jarak atas agar tidak terlalu dekat dengan konten lainnya */
+  cursor: pointer; /* Ubah cursor jadi pointer */
+  border-radius: 4px; /* Tambahkan radius untuk sudut yang sedikit melengkung */
+}
+
+/* Hover effect untuk tombol */
+#iveReadBtn:hover {
+  background-color: #c9302c; /* Warna sedikit lebih gelap saat di-hover */
 }
 
 .close-button {

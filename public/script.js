@@ -1,36 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('infoModal');
   const lastRead = localStorage.getItem('modalLastRead');
-  const currentTime = new Date().getTime(); // Waktu saat ini dalam milidetik
+  const currentTime = new Date().getTime();
 
-  // Fungsi untuk menutup modal dan menyimpan waktu
-  function closeModal() {
-    modal.style.display = 'none';
-    localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat modal ditutup
-  }
-
-  // Cek apakah modal perlu ditampilkan
   if (!lastRead || (currentTime - lastRead > 86400000)) {
-    modal.style.display = 'flex'; // Menampilkan modal di tengah
+    document.getElementById('infoModal').style.display = 'flex'; // Tampilkan modal
 
-    // Hapus event listener sebelumnya (jika ada)
-    document.getElementById('iveReadBtn').onclick = null;
-    document.getElementById('closeModal').onclick = null;
-
-    // Tambahkan event listener untuk tombol "I've Read"
-    document.getElementById('iveReadBtn').onclick = closeModal;
-
-    // Tambahkan event listener untuk tombol tutup
-    document.getElementById('closeModal').onclick = closeModal;
-
-    // Tutup modal jika klik di luar konten modal
-    window.onclick = function(event) {
-      if (event.target === modal) {
-        closeModal();
-      }
+    document.getElementById('iveReadBtn').onclick = function() {
+      document.getElementById('infoModal').style.display = 'none';
+      localStorage.setItem('modalLastRead', currentTime);
     };
+
+    document.getElementById('closeModal').onclick = function() {
+      document.getElementById('infoModal').style.display = 'none';
+      localStorage.setItem('modalLastRead', currentTime);
+    };
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('infoModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+        localStorage.setItem('modalLastRead', currentTime);
+      }
+    }
   }
 });
+
 
 
 // ------------------------------------------------------------------------------------------------------------------ //

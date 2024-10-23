@@ -130,13 +130,17 @@ nav ul li a i {
   width: 80%;
   max-width: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative; /* Tambahkan relative positioning */
 }
 
 .modal-content img {
   display: block;
-  max-width: 130px;
+  max-width: 30px;
   height: auto;
-  margin: 20px auto 0; /* Pusatkan gambar dengan margin atas */
+  position: absolute; /* Gunakan absolute positioning */
+  bottom: 20px; /* Tempatkan 20px dari bawah */
+  left: 20px; /* Tempatkan 20px dari kiri */
+  margin: 0; /* Hapus margin untuk gambar */
 }
 
 /* Gaya untuk tombol I've Read, disamakan dengan Log Out */

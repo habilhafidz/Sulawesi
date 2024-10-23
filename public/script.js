@@ -127,27 +127,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const changeRoleButton = document.getElementById('changeRoleButton'); // Dapatkan tombol Change Role
-    const modal = document.getElementById('changeRoleModal'); // Dapatkan modal
-    const closeModal = document.querySelector('.close'); // Dapatkan tombol close
+    const changeRoleButton = document.getElementById('changeRoleButton'); 
+    const modal = document.getElementById('changeRoleModal');
+    const closeModal = document.querySelector('.close');
 
-    // Buka modal ketika tombol "Change Role" diklik
-    changeRoleButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Cegah aksi default dari <a> (redirect)
-        modal.style.display = 'block'; // Tampilkan modal
-    });
+    if (changeRoleButton && modal && closeModal) {
+        // Buka modal ketika tombol "Change Role" diklik
+        changeRoleButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            modal.style.display = 'block';
+        });
 
-    // Tutup modal ketika tombol "X" diklik
-    closeModal.addEventListener('click', function() {
-        modal.style.display = 'none'; // Sembunyikan modal
-    });
+        // Tutup modal ketika tombol "X" diklik
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
 
-    // Tutup modal jika klik di luar modal
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none'; // Sembunyikan modal
-        }
-    });
+        // Tutup modal jika klik di luar modal
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    } else {
+        console.error('One or more elements for Change Role feature not found.');
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -513,7 +517,7 @@ function registerUser(event) {
 }
 
 // Menghubungkan fungsi dengan form listener
-document.getElementById('registerForm').addEventListener('submit', sendVerificationCode);
+document.getElementById('registerUser').addEventListener('submit', sendVerificationCode);
 document.getElementById('verificationForm').addEventListener('submit', registerUser);
 
 function login() {

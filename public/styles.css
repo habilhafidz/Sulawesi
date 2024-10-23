@@ -112,7 +112,7 @@ nav ul li a i {
   z-index: 1010;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 60%;
   height: 100%;
   overflow: auto; /* Tambahkan scrollbar jika diperlukan */
   background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */

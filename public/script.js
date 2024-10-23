@@ -8,23 +8,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('infoModal');
     modal.style.display = 'flex'; // Menampilkan modal di tengah
 
-    // Tambahkan event listener untuk tombol "I've Read"
-    document.getElementById('iveReadBtn').onclick = function() {
-      modal.style.display = 'none';
-      localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat tombol ditekan
-    };
-
-    // Tambahkan event listener untuk tombol tutup
-    document.getElementById('closeModal').onclick = function() {
+    // Fungsi untuk menutup modal dan menyimpan waktu
+    function closeModal() {
       modal.style.display = 'none';
       localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat modal ditutup
-    };
+    }
+
+    // Tambahkan event listener untuk tombol "I've Read"
+    document.getElementById('iveReadBtn').onclick = closeModal;
+
+    // Tambahkan event listener untuk tombol tutup
+    document.getElementById('closeModal').onclick = closeModal;
 
     // Tutup modal jika klik di luar konten modal
     window.onclick = function(event) {
       if (event.target === modal) {
-        modal.style.display = 'none';
-        localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat modal ditutup
+        closeModal();
       }
     };
   }

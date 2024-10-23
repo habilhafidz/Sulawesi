@@ -125,7 +125,6 @@ nav ul li a i {
   color: #bf9b7a;
   margin: 15px;
   padding: 20px;
-  padding-bottom: 120px; /* Ruang tambahan untuk gambar di bawah */
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
@@ -135,11 +134,11 @@ nav ul li a i {
 
 .modal-content img {
   display: block;
-  max-width: 30px;
+  max-width: 130px;
   height: auto;
   position: absolute; /* Gunakan absolute positioning */
   bottom: 20px; /* Tempatkan 20px dari bawah */
-  left: 20px; /* Tempatkan 20px dari kiri */
+  right: 20px; /* Tempatkan 20px dari kiri */
   margin: 0; /* Hapus margin untuk gambar */
 }
 

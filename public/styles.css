@@ -116,14 +116,14 @@ nav ul li a i {
   background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
   
   /* Menggunakan flexbox untuk memusatkan konten */
-  display: flex; /* Menggunakan flexbox */
   justify-content: center; /* Memusatkan secara horizontal */
   align-items: center; /* Memusatkan secara vertikal */
+  display: flex; /* Memastikan ini ada di sini, tapi tidak perlu diatur dengan dua kali */
 }
 
 .modal-content {
   text-align: justify;
-  background-color: #3b2b1c;
+  background-color: #3b2b1c; /* Sesuaikan warna latar belakang modal */
   color: #bf9b7a;
   margin: 15px; /* Margin di luar modal */
   padding: 20px; /* Padding di semua sisi */

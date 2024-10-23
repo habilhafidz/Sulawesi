@@ -110,10 +110,11 @@ nav ul li a i {
   display: none; /* Disembunyikan secara default */
   position: fixed;
   z-index: 1010;
-  left: 0;
+  center: 0;
   top: 0;
   width: 60%;
   height: 100%;
+  padding-bottom: 20px;
   overflow: auto; /* Tambahkan scrollbar jika diperlukan */
   background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
 }

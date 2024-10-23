@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Cek apakah pengguna sudah menekan tombol "I've Read"
+  const modal = document.getElementById('infoModal');
   const lastRead = localStorage.getItem('modalLastRead');
   const currentTime = new Date().getTime(); // Waktu saat ini dalam milidetik
 
-  // Jika belum ada timestamp atau sudah lebih dari 24 jam (86400000 ms)
+  // Fungsi untuk menutup modal dan menyimpan waktu
+  function closeModal() {
+    modal.style.display = 'none';
+    localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat modal ditutup
+  }
+
+  // Cek apakah modal perlu ditampilkan
   if (!lastRead || (currentTime - lastRead > 86400000)) {
-    const modal = document.getElementById('infoModal');
     modal.style.display = 'flex'; // Menampilkan modal di tengah
 
-    // Fungsi untuk menutup modal dan menyimpan waktu
-    function closeModal() {
-      modal.style.display = 'none';
-      localStorage.setItem('modalLastRead', currentTime); // Simpan waktu saat modal ditutup
-    }
+    // Hapus event listener sebelumnya (jika ada)
+    document.getElementById('iveReadBtn').onclick = null;
+    document.getElementById('closeModal').onclick = null;
 
     // Tambahkan event listener untuk tombol "I've Read"
     document.getElementById('iveReadBtn').onclick = closeModal;

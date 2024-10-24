@@ -159,13 +159,13 @@ nav ul li a i {
 }
 
 .modal-content {
-  transform: translateY(-20px); /* Naikkan modal 20px */
+  transform: translateY(-40px); /* Naikkan modal 20px */
   text-align: justify;
   background-color: #3b2b1c;
   color: #bf9b7a;
   margin: 15px;
   padding: 20px;
-  padding-bottom: 120px;
+  padding-bottom: 140px;
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;

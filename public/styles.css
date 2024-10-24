@@ -183,6 +183,10 @@ nav ul li a i {
   margin: 0; /* Hapus margin untuk gambar */
 }
 
+#infoModal p {
+    margin-top: 10px; /* Atur jarak atas untuk p */
+}
+
 /* Gaya untuk tombol I've Read, disamakan dengan Log Out */
 #iveReadBtn {
   background-color: #d9534f; /* Warna latar belakang merah serupa tombol Log Out */

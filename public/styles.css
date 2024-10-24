@@ -208,10 +208,14 @@ nav ul li a i {
 }
 
 .close-button {
+  position: absolute;
+  top: 1px; /* Atur jarak dari atas */
+  right: 1px; /* Atur jarak dari kanan */
   color: #bf9b7a;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer; /* Menambahkan pointer untuk menunjukkan klik */
 }
 
 .close-button:hover,

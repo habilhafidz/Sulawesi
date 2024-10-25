@@ -2,31 +2,57 @@ document.addEventListener('DOMContentLoaded', function() {
     const infoModal = document.getElementById('infoModal');
     const closeModal = document.getElementById('closeModal');
     const iveReadBtn = document.getElementById('iveReadBtn');
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
 
+    // Tampilkan modal saat halaman dimuat
     if (infoModal && closeModal && iveReadBtn) {
-        document.getElementById('infoModal').style.display = 'flex'; // Tampilkan modal
+        infoModal.style.display = 'flex';
 
         iveReadBtn.onclick = function() {
             infoModal.style.display = 'none';
             localStorage.setItem('modalLastRead', new Date().getTime());
+            audio.pause();
         };
 
         closeModal.onclick = function() {
             infoModal.style.display = 'none';
             localStorage.setItem('modalLastRead', new Date().getTime());
+            audio.pause();
         };
 
         window.onclick = function(event) {
             if (event.target === infoModal) {
                 infoModal.style.display = 'none';
                 localStorage.setItem('modalLastRead', new Date().getTime());
+                audio.pause();
             }
         };
-    } else {
-        console.error('Modal elements not found.');
     }
-});
 
+    // Play/Pause kontrol untuk audio
+    let isPlaying = false;
+    playPauseBtn.onclick = function() {
+        if (!isPlaying) {
+            audio.play();
+            playPauseBtn.classList.remove('fa-play');
+            playPauseBtn.classList.add('fa-pause');
+            isPlaying = true;
+        } else {
+            audio.pause();
+            playPauseBtn.classList.remove('fa-pause');
+            playPauseBtn.classList.add('fa-play');
+            isPlaying = false;
+        }
+    };
+
+    // Reset tombol dan audio ketika audio selesai
+    audio.onended = function() {
+        playPauseBtn.classList.remove('fa-pause');
+        playPauseBtn.classList.add('fa-play');
+        isPlaying = false;
+    };
+});
 
 
 // ------------------------------------------------------------------------------------------------------------------ //

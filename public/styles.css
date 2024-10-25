@@ -116,7 +116,7 @@ nav ul li a i {
 /* Media Query untuk Mobile dan Tablet */
 @media only screen and (max-width: 768px) {
     .banner {
-        height: 200px; /* Tinggi untuk mobile/tablet */
+        height: 170px; /* Tinggi untuk mobile/tablet */
     }
 }
 
@@ -235,6 +235,26 @@ nav ul li a i {
 .play-btn:hover {
     color: #c9302c;
 }
+
+
+.desktop-title {
+    display: none; /* Sembunyikan judul desktop secara default */
+}
+
+.mobile-title {
+    display: block; /* Tampilkan judul mobile secara default */
+}
+
+@media only screen and (min-width: 768px) { /* Sesuaikan dengan lebar layar desktop Anda */
+    .desktop-title {
+        display: block; /* Tampilkan judul desktop di layar lebih besar */
+    }
+
+    .mobile-title {
+        display: none; /* Sembunyikan judul mobile di layar lebih besar */
+    }
+}
+
 
 /*-----------------------------------------------------------------------------------------------*/
 

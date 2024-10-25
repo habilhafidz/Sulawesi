@@ -326,6 +326,11 @@ nav ul li a i {
 
 /* Media Query untuk Mobile */
 @media only screen and (max-width: 768px) {
+    #about {
+        max-width: 90%; /* Atur lebar maksimum untuk tampilan mobile */
+        margin: 0 auto; /* Pusatkan konten */
+    }
+    
     .content-wrapper {
         flex-direction: column; /* Stack elemen di atas satu sama lain pada layar kecil */
     }

@@ -231,13 +231,13 @@ nav ul li a i {
 }
 
 /* Gaya tambahan untuk tombol Play/Pause */
-#playPauseBtn {
+.play-btn {
     font-size: 30px;
     cursor: pointer;
     color: #bf9b7a;
 }
 
-#playPauseBtn:hover {
+.play-btn:hover {
     color: #c9302c;
 }
 

@@ -34,7 +34,8 @@ header {
     left: -250px; /* Hidden offscreen */
     width: 250px;
     height: 100%;
-    background-color: #bf9b7a;
+    background-color: rgba(191, 155, 122, 0.6);
+    backdrop-filter: blur(5px); /* Blur latar belakang */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     transition: left 0.3s ease;
     z-index: 10; /* Make sure it's above other content */
